@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="fi.jamk.l8457student.golfcourse.DetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="4dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:id="@+id/courseImageView" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/courseImageView"
+            android:id="@+id/courseAddressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/courseImageView"
+            android:layout_below="@id/courseAddressTextView"
+            android:id="@+id/coursePhoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/courseImageView"
+            android:layout_below="@id/coursePhoneTextView"
+            android:id="@+id/courseEmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingBottom="5dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_margin="5dp"
+        android:id="@+id/courseInfoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"/>
+
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/courseWebInfoTextView"
+            android:text="Katso kentät kotisivut:"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/courseWebInfoTextView"
+            android:layout_marginLeft="20dp"
+            android:autoLink="all"
+            android:id="@+id/courseWebTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/courseMapInfoTextView"
+            android:layout_below="@id/courseWebTextView"
+            android:text="Katso kentän sijainti:"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Näytä kartalla"
+            android:layout_below="@id/courseMapInfoTextView"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/courseMapTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
